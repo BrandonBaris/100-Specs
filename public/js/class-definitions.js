@@ -28,7 +28,7 @@ var sahara_animal = "The Addax";
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-var planets = [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto];
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
 /* Step 5
  *
@@ -37,7 +37,7 @@ var planets = [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pl
  * each galilean moon of Jupiter
  *
  */
-
+var galilean_moons = ["Callisto","Io","Ganymede","Europa"];
 
 /* Step 6 φ
  *
