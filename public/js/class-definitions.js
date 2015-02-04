@@ -355,7 +355,14 @@ function drink(beer){
  * @return {String}
  *
  */
-
+function browseURL(browser){
+  if (browsers.hasOwnProperty(browser)){
+    return browsers[browser]
+  } else {
+    console.log('error');
+    return false;
+  }
+}
 
 /* Step 25
  *
