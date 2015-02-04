@@ -1115,13 +1115,10 @@ Animal.prototype.isWarmBlooded = function(){
   switch (this.species){
     case "Fish" : 
     return false;
-    break;
     case "Monkey" : 
     return true;
-    break;
     case "Bird" : 
     return true;
-    break;
     default : return "Could not determine if warm-blooded";
   }
 };
@@ -1165,28 +1162,20 @@ Vehicle.prototype.drive = function(streetName){
   switch(this.sides){
     case 3 :
     return 'triangle';
-    break;
     case 4 :
     return "quadrilateral";
-    break;
     case 5 :
     return "pentagon";
-    break;
     case 6 :
     return "hexagon";
-    break;
     case 7 :
     return "heptagon";
-    break;
     case 8 :
     return "octagon";
-    break;
     case 9 :
     return "nonagon";
-    break;
     case 10 :
     return "decagon";
-    break;
     default :
     return "Could not determine type";
   }
@@ -1200,7 +1189,14 @@ Vehicle.prototype.drive = function(streetName){
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+Box.prototype.openBox = function(){
+  if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  } else {
+    return false;
+  }
+};
 
  /* Step 85
  *
