@@ -543,11 +543,12 @@ function Garden(plantsTotal){
 }
 
 Garden.prototype.water = function(){
-  return this.isWatered === true;
+  return this.isWatered = true;
 };
 
 Garden.prototype.grow = function(){
   if (this.isWatered === true){
+    this.isWatered = false;
     return this.plantsTotal += 1;
   } else {
     return false;
@@ -1008,7 +1009,9 @@ function Shoe(size,color){
  * House class
  * @param {number} stories How many stories tall the house is
  */
-
+function House(stories){
+  this.stories = stories;
+}
 
 /**
  * Step 57
@@ -1016,7 +1019,6 @@ function Shoe(size,color){
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-
 
 /**
  * Step 58
