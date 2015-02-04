@@ -964,7 +964,7 @@ function Shape(sides){
   if (sides > 3){
     this.sides = sides;
   } else {
-    this.sides = 3;
+    this.sides = null;
   }
   //this.sides = sides;
 }
@@ -1334,8 +1334,8 @@ var forwardDriving = new Vehicle('KIA','Forte').drive();
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var decagon = new Shape(10).getType();
+var polygon = new Shape().getType();
 
 
 /* Step 94
