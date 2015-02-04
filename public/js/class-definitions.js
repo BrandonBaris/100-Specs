@@ -456,7 +456,13 @@ Person.prototype.earnMoney = function(money){
  * @return {Number}
  *
  */
-
+function purchaseLaptop(laptop){
+  if (laptopCosts.hasOwnProperty(laptop)){
+    return laptopCosts[laptop].toString();
+  } else {
+    return -1;
+  }
+}
 
 /* Step 29
  *
