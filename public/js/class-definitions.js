@@ -966,7 +966,6 @@ function Shape(sides){
   } else {
     this.sides = null;
   }
-  //this.sides = sides;
 }
 
 /**
@@ -1344,8 +1343,8 @@ var polygon = new Shape().getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = new Box('Chaos',false).openBox();
+var closeAnOpenBox = new Box('Hope',true).openBox();
 
 
  /* Step 95
