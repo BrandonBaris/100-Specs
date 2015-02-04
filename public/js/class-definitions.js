@@ -164,7 +164,7 @@ var rainbow = {
     violet : "#A915ED"
   },
   isDouble : true
-}
+};
 
 /* Step 14
  *
