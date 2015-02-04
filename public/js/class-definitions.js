@@ -968,7 +968,10 @@ function Shape(sides){
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-
+function Box(anything,isOpen){
+this.contents = anything;
+this.isOpen = isOpen;
+}
 
 /**
  * Step 54
