@@ -627,7 +627,7 @@ PrincessLeia.prototype.marries = function(love){
   if (love === "Luke Skywalker"){
     return "Gross!"
   }
-  
+
   if (love === "Han Solo"){
     return true;
   } else {
@@ -651,7 +651,18 @@ PrincessLeia.prototype.marries = function(love){
  *   staplePapers
  *
  */
+function Stapler(color,maxPapers){
+  this.color = color;
+  this.maxPapers = maxPapers;
+}
 
+Stapler.prototype.staplePapers = function(papers){
+  if(papers <= this.maxPapers){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* Step 35
  *
