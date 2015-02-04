@@ -357,7 +357,7 @@ function drink(beer){
  */
 function browseURL(browser){
   if (browsers.hasOwnProperty(browser)){
-    return browsers[browser]
+    return browsers[browser];
   } else {
     console.log('error');
     return false;
@@ -436,15 +436,15 @@ function Person(name,money,age,gender){
   this.money = money;
   this.age = age;
   this.gender = gender;
-};
+}
 
 Person.prototype.spendMoney = function(money){
   return this.money -= money;
-}
+};
 
 Person.prototype.earnMoney = function(money){
   return this.money += money;
-}
+};
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
@@ -509,7 +509,7 @@ function Pen(color){
 
 Pen.prototype.write = function(msg){
   return this.color + ': ' + msg;
-}
+};
 
 /* Step 31
  *
@@ -543,8 +543,8 @@ function Garden(plantsTotal){
 }
 
 Garden.prototype.water = function(){
-  return this.isWatered = true;
-}
+  return this.isWatered === true;
+};
 
 Garden.prototype.grow = function(){
   if (this.isWatered === true){
@@ -552,7 +552,7 @@ Garden.prototype.grow = function(){
   } else {
     return false;
   }
-}
+};
 /* Step 32
  *
  * Define a class named "SolarSystem" with a property
@@ -575,11 +575,11 @@ function SolarSystem(){
 
 SolarSystem.prototype.addPlanet = function(planet){
   return this.planets.push(planet);
-}
+};
 
 SolarSystem.prototype.removePlanet = function(planet){
   return this.planets.pop();
-}
+};
 
 /* Step 33
  *
@@ -623,16 +623,16 @@ PrincessLeia.prototype = Object.create(Person.prototype,{constructor : {value : 
 PrincessLeia.prototype.shootsGun = function(){
   this.isInTrouble = false;
   return "Leia shoots her gun wildly";
-}
+};
 
 PrincessLeia.prototype.getsInTrouble = function(){
   this.isInTrouble = true;
   return "Help me Obi-wan Kenobi, you're my only hope";
-}
+};
 
 PrincessLeia.prototype.marries = function(love){
   if (love === "Luke Skywalker"){
-    return "Gross!"
+    return "Gross!";
   }
 
   if (love === "Han Solo"){
@@ -640,7 +640,7 @@ PrincessLeia.prototype.marries = function(love){
   } else {
     return false;
   }
-}
+};
 /* Step 34
  *
  * Define a class named "Stapler" with properties "color"
@@ -669,7 +669,7 @@ Stapler.prototype.staplePapers = function(papers){
   } else {
     return false;
   }
-}
+};
 
 /* Step 35
  *
@@ -719,7 +719,7 @@ Scientist.prototype = Object.create(Person.prototype, {constructor : {value : Pe
 
 Scientist.prototype.addDiscipline = function(discipline){
   return this.disciplines.push(discipline);
-}
+};
 
 Scientist.prototype.checkDiscipline = function(discipline){
   if (this.disciplines.indexOf(discipline) === -1){
@@ -727,7 +727,7 @@ Scientist.prototype.checkDiscipline = function(discipline){
   } else {
     return true;
   }
-}
+};
 
 Scientist.prototype.addDiscovery = function(discovery){
   this.discoveries.push(discovery);
@@ -743,7 +743,7 @@ Scientist.prototype.addDiscovery = function(discovery){
     return "I discovered " + this.discoveries.join(', ') + ", and " + tempPop + ".";
   }
  
-}
+};
 /* Step 36
  *
  * Define a class named "BankAccount" that has properties
@@ -986,7 +986,9 @@ this.isOpen = isOpen;
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door(isOpen){
+  this.isOpen = isOpen;
+}
 
 /**
  * Step 55
