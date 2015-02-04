@@ -961,7 +961,7 @@ function Vehicle(make,model){
  * @param {number} sides The number of sides, should be greater than 3
  */
 function Shape(sides){
-  if (sides > 3){
+  if (sides >= 3){
     this.sides = sides;
   } else {
     this.sides = null;
@@ -1353,8 +1353,8 @@ var closeAnOpenBox = new Box('Hope',true).openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor = new Door(false).openClose();
+var closeAnOpenDoor = new Door(true).openClose();
 
 
 /* Step 96
