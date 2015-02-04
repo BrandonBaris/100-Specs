@@ -534,8 +534,18 @@ Pen.prototype.write = function(msg){
  *   grow
  * 
  */
+function Garden(plantsTotal){
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
+}
 
+Garden.prototype.water = function(){
+  return this.isWatered = true;
+}
 
+Garden.prototype.grow = function(){
+  return this.plantsTotal += 1;
+}
 /* Step 32
  *
  * Define a class named "SolarSystem" with a property
