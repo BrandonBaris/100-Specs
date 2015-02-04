@@ -1086,7 +1086,7 @@ var chocolateChip = new Cookie('chocolate','chocolateChip');
 var gingerbread = new Cookie('gingerbread','gingerbread');
 
 // Create 2 different meals
-var breakfast;
+var breakfast = new Meal(['cereal','milk']);
 var dinner;
 
 
