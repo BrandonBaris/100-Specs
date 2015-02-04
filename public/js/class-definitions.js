@@ -179,7 +179,7 @@ var rainbow = {
  * "Bieber Linux"
  *
  */
-
+var linuxFlavors = ["Gentoo", "Fedora","Debian","Slackware","Red Hat","Bieber Linux"];
 
 /* Step 15
  *
