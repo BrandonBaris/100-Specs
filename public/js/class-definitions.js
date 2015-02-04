@@ -403,7 +403,7 @@ function listLivingOrgClass(){
  */
 function favoritePlanet(currplanet){
   if (planets.indexOf(currplanet) !== -1){
-    return "I\'m from "+ currplanet + ", but I wish I could go to " + planets[Math.floor(Math.random()*planets.length+1)] + "!";
+    return "I'm from " + currplanet + ", but I wish I could go to " + planets[Math.floor(Math.random()*planets.length)] + ".";
   } else {
     return currplanet + " is not a planet!";
   }
@@ -431,8 +431,20 @@ function favoritePlanet(currplanet){
  *   earnMoney
  *
  */
+function Person(name,money,age,gender){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+};
 
+Person.prototype.spendMoney = function(money){
+  return this.money -= money;
+}
 
+Person.prototype.earnMoney = function(money){
+  return this.money += money;
+}
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
