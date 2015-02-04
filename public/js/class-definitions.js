@@ -1291,11 +1291,12 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
 Meal.prototype.containsJunkFood = function(){
   var junkFood = ["chips", "soda", "ice cream", "popcorn", "candy"];
   for(i = 0; i < this.foods.length; i++) {
-    if (this.foods.indexOf(junkFood[i]) !== -1){
+    for(j = 0; j < junkFood.length; j++) {
+    if (this.foods.indexOf(junkFood[j]) !== -1){
       return true;
-    } else {
-      return false;
     }
+  }
+  return false;
   }
 };
 
@@ -1403,5 +1404,5 @@ var cookieMonsterBlocked = new Cookie('Peanut butthurt').swipedByCookieMonster('
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var badForYou = new Meal(['carrots','celery','candy','tomatoes']).containsJunkFood();
+var goodForYou = new Meal(['bacon','bacon','bacon','bacon','bacon']).containsJunkFood();
