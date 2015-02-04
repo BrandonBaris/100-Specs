@@ -594,7 +594,7 @@ SolarSystem.prototype.removePlanet = function(planet){
  * 
  * In the 'marries' method - Add a message of disapproval for "Luke Skywalker"
  * "Gross!"
- * 
+ *
  * 
  * class
  *   PrincessLeia
@@ -606,8 +606,34 @@ SolarSystem.prototype.removePlanet = function(planet){
  *   marries
  *
  */
+function PrincessLeia(name,money,age,gender){
+  Person.call(this,name,money,age,gender);
+  this.isInTrouble = null;
+}
 
+PrincessLeia.prototype = Object.create(Person.prototype,{constructor : {value : Person}});
 
+PrincessLeia.prototype.shootsGun = function(){
+  this.isInTrouble = false;
+  return "Leia shoots her gun wildly";
+}
+
+PrincessLeia.prototype.getsInTrouble = function(){
+  this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope";
+}
+
+PrincessLeia.prototype.marries = function(love){
+  if (love === "Luke Skywalker"){
+    return "Gross!"
+  }
+  
+  if (love === "Han Solo"){
+    return true;
+  } else {
+    return false;
+  }
+}
 /* Step 34
  *
  * Define a class named "Stapler" with properties "color"
