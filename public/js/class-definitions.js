@@ -702,8 +702,41 @@ Stapler.prototype.staplePapers = function(papers){
  *   addDiscovery
  *   
  */
+function Scientist(name,money,age,gender){
+  Person.call(this,name,money,age,gender);
+  this.disciplines = [];
+  this.discoveries = [];
+}
 
+Scientist.prototype = Object.create(Person.prototype, {constructor : {value : Person}});
 
+Scientist.prototype.addDiscipline = function(discipline){
+  return this.disciplines.push(discipline);
+}
+
+Scientist.prototype.checkDiscipline = function(discipline){
+  if (this.disciplines.indexOf(discipline) === -1){
+    return false; 
+  } else {
+    return true;
+  }
+}
+
+Scientist.prototype.addDiscovery = function(discovery){
+  this.discoveries.push(discovery);
+  if (this.discoveries.length === 1 ) {
+    return "I discovered " + this.discoveries.join('') + ".";
+  }
+  if (this.discoveries.length === 2){
+    return "I discovered " + this.discoveries.join(' and ') + ".";
+  } 
+
+  if (this.discoveries.length > 2){
+    var tempPop = this.discoveries.pop();
+    return "I discovered " + this.discoveries.join(', ') + ", and " + tempPop + ".";
+  }
+ 
+}
 /* Step 36
  *
  * Define a class named "BankAccount" that has properties
