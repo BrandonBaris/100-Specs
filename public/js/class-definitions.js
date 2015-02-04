@@ -1112,12 +1112,16 @@ var dinner = new Meal(['fish','vegetables']);
  */
 Animal.prototype.isWarmBlooded = function(){
   switch (this.species){
+
     case "Fish" : 
     return false;
+
     case "Monkey" : 
     return true;
+
     case "Bird" : 
     return true;
+
     default : return "Could not determine if warm-blooded";
   }
 };
@@ -1159,22 +1163,31 @@ Vehicle.prototype.drive = function(streetName){
  */
  Shape.prototype.getType = function(){
   switch(this.sides){
+
     case 3 :
     return 'triangle';
+
     case 4 :
     return "quadrilateral";
+
     case 5 :
     return "pentagon";
+
     case 6 :
     return "hexagon";
+
     case 7 :
     return "heptagon";
+
     case 8 :
     return "octagon";
+
     case 9 :
     return "nonagon";
+
     case 10 :
     return "decagon";
+    
     default :
     return "Could not determine type";
   }
