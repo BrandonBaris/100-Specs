@@ -401,7 +401,13 @@ function listLivingOrgClass(){
  * @return {String}
  *
  */
-
+function favoritePlanet(currplanet){
+  if (planets.indexOf(currplanet) !== -1){
+    return "I\'m from "+ currplanet + ", but I wish I could go to " + planets[Math.floor(Math.random()*planets.length+1)] + "!";
+  } else {
+    return currplanet + " is not a planet!";
+  }
+}
 
 /* Step 27
  *
