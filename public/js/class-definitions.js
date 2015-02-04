@@ -3,7 +3,7 @@
  * Declare a variable named "unicorn"
  *
  */
-
+var unicorn = null;
 
 /* Step 2
  *
@@ -12,14 +12,14 @@
  *
  */
 
-
+var videogame_system = "Atari";
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+var sahara_animal = "The Addax";
 
 /* Step 4
  *
