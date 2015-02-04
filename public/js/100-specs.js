@@ -834,7 +834,7 @@ HundredSpecs.prototype = {
 			var myGarden = new Garden(10);
 			js.expect.E.expect(myGarden.grow()).to.equal(false);
 			js.expect.E.expect(myGarden.plantsTotal).to.equal(10);
-			myGaren.water();
+			myGarden.water();
 			js.expect.E.expect(myGarden.plantsTotal).to.equal(11);
 		});
 	}

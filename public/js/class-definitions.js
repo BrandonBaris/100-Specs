@@ -547,7 +547,7 @@ Garden.prototype.water = function(){
 }
 
 Garden.prototype.grow = function(){
-  if (this.iswatered === true){
+  if (this.isWatered === true){
     return this.plantsTotal += 1;
   } else {
     return false;

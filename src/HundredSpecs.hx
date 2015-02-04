@@ -628,7 +628,7 @@ class HundredSpecs
       var myGarden = untyped __js__("new Garden(10)");
       E.expect( untyped(myGarden.grow()) ).to.equal(false);
       E.expect( untyped(myGarden.plantsTotal) ).to.equal(10);
-      untyped (myGaren.water());
+      untyped (myGarden.water());
       E.expect( untyped(myGarden.plantsTotal) ).to.equal(11);
     });
   }
