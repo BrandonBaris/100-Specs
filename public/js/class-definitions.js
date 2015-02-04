@@ -373,7 +373,14 @@ function browseURL(browser){
  * @return {String}
  *
  */
+function listLivingOrgClass(){
+  var stringbikini;
+  for (i = 0; i < livingOrganismClassification.length ; i++){
+    stringbikini +=  '<ul><li>' + livingOrganismClassification[i] + '</li></ul>';
+  }
 
+  return stringbikini;
+}
 
 /* Step 26
  *
