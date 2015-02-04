@@ -1048,7 +1048,6 @@ function Meal(foods){
  * Steps 60-80 (each variable is a 'step')
  */
 
-
 // Create 2 different species of animals
 var george = new Animal('Monkey','male');
 var nemo = new Animal('Fish','male');
@@ -1062,8 +1061,9 @@ var square = new Shape(4);
 var hexagon = new Shape(6);
 
 // Create 2 boxes
+var cat = new Animal('Cat','female');
 var catBox = new Box(cat, true);
-var christmasPresent;
+var christmasPresent = new Box('coal',false);
 
 // Create 2 doors
 var automaticDoor;
