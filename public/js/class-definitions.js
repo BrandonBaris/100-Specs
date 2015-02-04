@@ -952,7 +952,14 @@ function Vehicle(make,model){
  * Shape class
  * @param {number} sides The number of sides, should be greater than 3
  */
-
+function Shape(sides){
+  if (sides > 3){
+    this.sides = sides;
+  } else {
+    this.sides = 3;
+  }
+  //this.sides = sides;
+}
 
 /**
  * Step 53
