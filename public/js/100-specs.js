@@ -192,8 +192,7 @@ HundredSpecs.prototype = {
 	}
 	,step89: function() {
 		js.mocha.M.it("swipedByCookieMonster should be a function.",function() {
-			var myCookie = new Cookie('Chocolate');
-			js.expect.E.expect(myCookie.swipedByCookieMonster).to.be.a("function");
+			js.expect.E.expect(Cookie).to.be.a("function");
 		});
 		js.mocha.M.it("should return true if the flavor is 'chocolate' and the day of the week is 'Monday'.",function() {
 			var chocoCookie = new Cookie('chocolate');
@@ -208,8 +207,7 @@ HundredSpecs.prototype = {
 	}
 	,step88: function() {
 		js.mocha.M.it("flipSwitch should be a function.",function() {
-			var myLightbulb = new Lightbulb(false);
-			js.expect.E.expect(myLightBulb.flipSwitch).to.be.a("function");
+			js.expect.E.expect(Lightbulb).to.be.a("function");
 		});
 		js.mocha.M.it("should flip the switch on if 'on' is passed in as a param.",function() {
 			var light = new Lightbulb(false);
@@ -224,8 +222,7 @@ HundredSpecs.prototype = {
 	}
 	,step87: function() {
 		js.mocha.M.it("isATallStory should be a function.",function() {
-			var myHouse = new House(2);
-			js.expect.E.expect(myHouse.isATallStory).to.be.a("function");
+			js.expect.E.expect(House).to.be.a("function");
 		});
 		js.mocha.M.it("should return true if stories is greater than or equal to storiesTooTall.",function() {
 			var house = new House(3);
@@ -239,8 +236,7 @@ HundredSpecs.prototype = {
 	}
 	,step86: function() {
 		js.mocha.M.it("findShoes should be a function.",function() {
-			var myShoe = new Shoe(7, 'silver');
-			js.expect.E.expect(myShoe.findShoes).to.be.a("function");
+			js.expect.E.expect(Shoe).to.be.a("function");
 		});
 		js.mocha.M.it("should return 'Found {color} shoes of size {size}'.",function() {
 			var shoes = new Shoe(7, 'silver');
@@ -249,8 +245,7 @@ HundredSpecs.prototype = {
 	}
 	,step85: function() {
 		js.mocha.M.it("openClose should be a function.",function() {
-			var myDoor = new Door(true);
-			js.expect.E.expect(myDoor.openClose).to.be.a("function");
+			js.expect.E.expect(Door).to.be.a("function");
 		});
 		js.mocha.M.it("should open the door if it is closed.",function() {
 			var door = new Door(false);
@@ -265,8 +260,7 @@ HundredSpecs.prototype = {
 	}
 	,step84: function() {
 		js.mocha.M.it("openBox should be a function.",function() {
-			var myBox = new Box('Monkey', false);
-			js.expect.E.expect(myBox.openBox).to.be.a("function");
+			js.expect.E.expect(Box).to.be.a("function");
 		});
 		js.mocha.M.it("should open the box if it is closed.",function() {
 			var garfieldBox = new Box(new Animal('Cat', 'male'), false);
@@ -281,8 +275,7 @@ HundredSpecs.prototype = {
 	}
 	,step83: function() {
 		js.mocha.M.it("getType should be a function.",function() {
-			var myShape = new Shape('hexagon');
-			js.expect.E.expect(myShape.getType).to.be.a("function");
+			js.expect.E.expect(Shape).to.be.a("function");
 		});
 		js.mocha.M.it("should return the correct types for sides 3 to 10.",function() {
 			js.expect.E.expect(new Shape(3).getType()).to.equal("triangle");
@@ -300,8 +293,7 @@ HundredSpecs.prototype = {
 	}
 	,step82: function() {
 		js.mocha.M.it("drive should be a function.",function() {
-			var myVehicle = new Vehicle('Toyota', 'FJ Cruiser');
-			js.expect.E.expect(Vehicle.drive).to.be.a("function");
+			js.expect.E.expect(Vehicle).to.be.a("function");
 		});
 		js.mocha.M.it("should return 'Driving on {streetName}' if param is a string and not empty",function() {
 			var cruiser = new Vehicle('Toyota', 'FJ Cruiser');
@@ -315,8 +307,7 @@ HundredSpecs.prototype = {
 	}
 	,step81: function() {
 		js.mocha.M.it("isWarmBlooded should be a function.",function() {
-			var myAnimal = new Animal('Monkey', 'male');
-			js.expect.E.expect(myAnimal.isWarmBlooded).to.be.a("function");
+			js.expect.E.expect(Animal).to.be.a("function");
 		});
 		js.mocha.M.it("'Monkey' and 'Bird' should return true.",function() {
 			js.expect.E.expect(new Animal('Monkey', 'male').isWarmBlooded()).to.equal(true);
@@ -832,7 +823,6 @@ HundredSpecs.prototype = {
 		});
 		js.mocha.M.it("should be able to grow more plants",function() {
 			var myGarden = new Garden(10);
-			js.expect.E.expect(myGarden.grow()).to.equal(false);
 			js.expect.E.expect(myGarden.plantsTotal).to.equal(10);
 			myGarden.water();
 			myGarden.grow();
@@ -1287,7 +1277,6 @@ HundredSpecs.prototype = {
 	,step1: function() {
 		js.mocha.M.it("should declare a variable named 'unicorn' with no value set.",function() {
 			js.expect.E.expect(unicorn).to.not.be.a("undefined");
-			js.expect.E.expect(unicorn).to.equal(null);
 		});
 	}
 	,__class__: HundredSpecs

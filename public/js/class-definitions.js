@@ -1133,7 +1133,16 @@ Animal.prototype.isWarmBlooded = function(){
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+ 
+Vehicle.prototype.drive = function(streetName){
+  if (typeof streetName === "string" && streetName !== '') {
+    return "Driving on " + streetName;
+  }
+  else {
+    return "Driving forward";
+  }
 
+};
 
  /* Step 83
  *
@@ -1152,7 +1161,7 @@ Animal.prototype.isWarmBlooded = function(){
  * Any other number => "Could not determine type"
  *
  */
-
+ 
 
 /* Step 84
  *
