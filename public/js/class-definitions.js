@@ -1078,12 +1078,12 @@ var singleStory = new House(1);
 var twoStory = new House(2);
 
 // Create 2 lightbulbs
-var incandescent = new Lightbulb(true, 'incandescent');
-var halogen = new Lightbulb(false, 'halogen');
+var incandescent = new Lightbulb( true, 'incandescent');
+var halogen = new Lightbulb( false, 'halogen');
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie('chocolate','chocolateChip');
+var gingerbread = new Cookie('gingerbread','gingerbread');
 
 // Create 2 different meals
 var breakfast;
